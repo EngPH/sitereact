@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Carrinho from './Carrinho';
 import './assets/estilolimpo.css'; // Importando estilolimpo.css
 import './assets/normalize.css'; // Importando normalize.css
 import './index.css';
@@ -84,12 +83,12 @@ const Navbar = () => {
               <a className="nav-link" href="#contact">Contato</a>
             </li>
             <li className="nav-item Carrinho">
-  <a className="nav-link" onClick={handleCarrinhoShow} href="#!">
-    <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-cart" viewBox="0 1 16 17">
-      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-    </svg> Carrinho
-  </a>
-</li>
+              <a className="nav-link" data-bs-toggle="modal" data-bs-target="#ModalCenter" href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-cart" viewBox="0 1 16 17">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg> Carrinho
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -136,7 +135,6 @@ class App extends Component {
             </div>
           </section></header>
         {/* Modal Carrinho*/}
-        <Carrinho />
         <div className="modal fade" id="ModalCenter" tabIndex={-1} role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
